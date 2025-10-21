@@ -1,15 +1,12 @@
 import service.TaskManager;
 import java.util.Scanner;
 
-/**
- * Главный класс приложения To-Do List
- */
 public class Main {
     private static final Scanner scanner = new Scanner(System.in);
     private static final TaskManager taskManager = new TaskManager();
     
     public static void main(String[] args) {
-        System.out.println("=== To-Do List Manager ===");
+        System.out.println("=== To-Do List ===");
         displayMenu();
         
         boolean running = true;
@@ -38,10 +35,10 @@ public class Main {
                     break;
                 case "0":
                     running = false;
-                    System.out.println("До свидания!");
+                    System.out.println("До свидания");
                     break;
                 default:
-                    System.out.println("Неверный выбор! Попробуйте снова.");
+                    System.out.println("Неверный выбор. Попробуйте снова.");
                     displayMenu();
             }
         }
@@ -49,16 +46,13 @@ public class Main {
         scanner.close();
     }
     
-    /**
-     * Отображает главное меню приложения
-     */
     private static void displayMenu() {
         System.out.println("\n=== Главное меню ===");
         System.out.println("1. Создать новую задачу");
         System.out.println("2. Показать все задачи");
         System.out.println("3. Редактировать задачу");
         System.out.println("4. Удалить задачу");
-        System.out.println("5. Сортировать задачи по дате");
+        System.out.println("5. Сортировать задачи по дедлайну");
         System.out.println("6. Поиск задач по тегам");
         System.out.println("0. Выход");
     }

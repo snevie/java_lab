@@ -1,10 +1,11 @@
 package model;
 
 /**
- * Класс для представления тега задачи
+ * Представление тегов задачи
+ * Пример: #работа, #учеба, #личное
  */
 public class Tag {
-    private String name;
+    private String name; // Название тега
     
     public Tag(String name) {
         this.name = name.toLowerCase().trim();
@@ -14,6 +15,7 @@ public class Tag {
         return name;
     }
     
+    // Проверка схожества тегов
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
